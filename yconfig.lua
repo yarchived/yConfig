@@ -17,26 +17,21 @@ function f:VARIABLES_LOADED()
 
 --    SetCVar('useUiScale', '1')
 --    SetCVar('UIScale', '0.800') -- scale people
---    SetCVar('cameraDistanceMax', '25') -- camera distance
+    SetCVar('cameraDistanceMax', '25') -- max camera distance
 
 --    SetCVar('gxcolorbits','16')
 --    SetCVar('gxdepthbits','16')
---    SetCVar('Maxfps', '40') -- max fps
---    SetCVar('maxfpsbk', '20') -- max fps @ background
+    SetCVar('Maxfps', '60') -- max fps
+    SetCVar('maxfpsbk', '15') -- max fps @ background
 
     SetCVar('screenshotFormat', 'tga')
     SetCVar('screenshotQuality', '10')
-
-    SetCVar('showArenaEnemyFrames', '0') -- hide blizz arena unitframe
-
-    SetCVar('showTargetCastbar', '0') -- target castbar
-    SetCVar('showVKeyCastbar', '0') -- castbar under nameplate
 
     SetCVar('showArenaEnemyFrames', '0')
 
     SetCVar('deselectOnClick', '1')
 
-    SetCVar('checkAddonVersion', '0') -- Load out-of-date addon!
+    SetCVar('checkAddonVersion', '0')
     --SetCVar('accountName', 'user@domain.com')
 
  --   SetCVar('Sound_AmbienceVolume', 0.6)
@@ -51,9 +46,7 @@ function f:VARIABLES_LOADED()
 
     SetCVar('profanityFilter', 0)
     --SetCVar('mouseSpeed', '1.2')
---    SetCVar('Sound_EnableSoundWhenGameIsInBG', 1)
---    SetCVar('screenshotFormat', 'tga')
---    SetCVar('screenshotQuality', '10')
+    SetCVar('Sound_EnableSoundWhenGameIsInBG', 1)
 
     for k ,v in pairs{
         'synchronizeMacros',
