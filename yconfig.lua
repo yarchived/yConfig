@@ -1,6 +1,4 @@
 
-hooksecurefunc('ShowReadyCheck', function() PlaySound('ReadyCheck') end)
-
 local f = CreateFrame'Frame'
 f:SetScript('OnEvent', function(self, event, ...)
     self[event](self, event, ...)
