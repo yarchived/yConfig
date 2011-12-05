@@ -18,6 +18,7 @@ function f:VARIABLES_LOADED()
 --    SetCVar('useUiScale', '1')
 --    SetCVar('UIScale', '0.800') -- scale people
     SetCVar('cameraDistanceMax', '25') -- max camera distance
+    SetCVar('cameraDistanceMaxFactor', '2')
 
 --    SetCVar('gxcolorbits','16')
 --    SetCVar('gxdepthbits','16')
