@@ -5,8 +5,8 @@ f:SetScript('OnEvent', function(self, event, ...)
 end)
 
 f:RegisterEvent'VARIABLES_LOADED'
-function f:VARIABLES_LOADED()
 
+function f:VARIABLES_LOADED()
     COMBAT_THREAT_DECREASE_0 = ''
     COMBAT_THREAT_DECREASE_1 = ''
     COMBAT_THREAT_DECREASE_2 = ''
@@ -15,13 +15,13 @@ function f:VARIABLES_LOADED()
 
     hooksecurefunc('ShowReadyCheck', function() PlaySound('ReadyCheck') end)
 
-    --    SetCVar('useUiScale', '1')
-    --    SetCVar('UIScale', '0.800') -- scale people
+    -- SetCVar('useUiScale', '1')
+    -- SetCVar('UIScale', '0.800') -- scale people
     SetCVar('cameraDistanceMax', '25') -- max camera distance
     SetCVar('cameraDistanceMaxFactor', '2')
 
-    --    SetCVar('gxcolorbits','16')
-    --    SetCVar('gxdepthbits','16')
+    -- SetCVar('gxcolorbits','16')
+    -- SetCVar('gxdepthbits','16')
     SetCVar('Maxfps', '60') -- max fps
     SetCVar('maxfpsbk', '15') -- max fps @ background
 
@@ -33,52 +33,52 @@ function f:VARIABLES_LOADED()
     SetCVar('deselectOnClick', '1')
 
     SetCVar('checkAddonVersion', '0')
-    --SetCVar('accountName', 'user@domain.com')
+    -- SetCVar('accountName', 'user@domain.com')
 
-    --   SetCVar('Sound_AmbienceVolume', 0.6)
-    --   SetCVar('Sound_MusicVolume', 0.4)
-    --   SetCVar('Sound_MasterVolume', 1)
-    --   SetCVar('Sound_SFXVolume', 1)
+    -- SetCVar('Sound_AmbienceVolume', 0.6)
+    -- SetCVar('Sound_MusicVolume', 0.4)
+    -- SetCVar('Sound_MasterVolume', 1)
+    -- SetCVar('Sound_SFXVolume', 1)
 
-    --   SetCVar('Sound_EnableAmbience', 1)
-    --   SetCVar('Sound_EnableMusic', 0)
-    --   SetCVar('Sound_EnableAllSound', 1)
-    --   SetCVar('Sound_EnableSFX', 1)
+    -- SetCVar('Sound_EnableAmbience', 1)
+    -- SetCVar('Sound_EnableMusic', 0)
+    -- SetCVar('Sound_EnableAllSound', 1)
+    -- SetCVar('Sound_EnableSFX', 1)
 
     SetCVar('profanityFilter', 0)
     --SetCVar('mouseSpeed', '1.2')
     SetCVar('Sound_EnableSoundWhenGameIsInBG', 1)
 
-    for k ,v in pairs{
+    for k ,v in pairs {
         'synchronizeMacros',
         'synchronizeBindings',
-        'synchronizeConfig',
-    } do
-    SetCVar(v, '1')
-end
+        'synchronizeConfig', } do
+        SetCVar(v, '1')
+    end
 
-for k, v in pairs(CHAT_CONFIG_CHAT_LEFT) do
-    ToggleChatColorNamesByClassGroup(true, v.type)
-end
-for i = 1, 10 do
-    ToggleChatColorNamesByClassGroup(true, 'CHANNEL' .. i)
-end
+    for k, v in pairs(CHAT_CONFIG_CHAT_LEFT) do
+        ToggleChatColorNamesByClassGroup(true, v.type)
+    end
+    for i = 1, 10 do
+        ToggleChatColorNamesByClassGroup(true, 'CHANNEL' .. i)
+    end
 
-ChatTypeInfo.WHISPER.sticky = 0
+    ChatTypeInfo.WHISPER.sticky = 0
 
-JPACK_ORDER = GetLocale() == 'zhCN' and {
-    '炉石', '气阀微粒提取器', '矿工锄', '剥皮小刀', '#鱼竿', '##材料', '#武器', '#护甲',
-    '#配方', '#其它', '#消耗品', '#商品', '鱼油', '#任务', '##任务', '#珠宝',
-} or GetLocale() == 'zhTW' and {
-    '爐石', '气阀微粒提取器', '礦工豬', '剝皮小刀', '#魚干', '##施法材料', '#武器', '#護甲',
-    '#配方', '#其他', '#消耗品', '#商品', '魚油', '#任務', '##任務', '#珠寶',
-} or {
-    'Hearthstone', '##Mounts', 'Mining Pick', 'Skinning Knife', '#Fishing Poles', '#Weapon', '#Armor',
-    '#Recipe', '#Miscellaneous', '#Consumable', '#Trade Goods', 'Fish Oil', '#Quest', '#Gem', '##Jewelcrafting',
-}
-JPACK_DEPOSIT = {}
-JPACK_DRAW = {}
-JPACK_IGNORE_BAGS = {}
+    JPACK_ORDER = GetLocale() == 'zhCN' and {
+        '炉石', '气阀微粒提取器', '矿工锄', '剥皮小刀', '#鱼竿', '##材料', '#武器', '#护甲',
+        '#配方', '#其它', '#消耗品', '#商品', '鱼油', '#任务', '##任务', '#珠宝',
+    } or GetLocale() == 'zhTW' and {
+        '爐石', '气阀微粒提取器', '礦工豬', '剝皮小刀', '#魚干', '##施法材料', '#武器', '#護甲',
+        '#配方', '#其他', '#消耗品', '#商品', '魚油', '#任務', '##任務', '#珠寶',
+    } or {
+        'Hearthstone', '##Mounts', 'Mining Pick', 'Skinning Knife', '#Fishing Poles', '#Weapon', '#Armor',
+        '#Recipe', '#Miscellaneous', '#Consumable', '#Trade Goods', 'Fish Oil', '#Quest', '#Gem', '##Jewelcrafting',
+    }
+
+    JPACK_DEPOSIT = {}
+    JPACK_DRAW = {}
+    JPACK_IGNORE_BAGS = {}
 end
 
 f:RegisterEvent'UPDATE_PENDING_MAIL'
